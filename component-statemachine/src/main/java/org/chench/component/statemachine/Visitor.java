@@ -15,7 +15,7 @@ public interface Visitor {
      * @param: visitable the element to be visited
      * @return: java.lang.String
      **/
-    String visitOnEntry(StateMachine<?, ?, ?> visitable);
+    String visitOnEntry(StateMachine<?, ?, ?> stateMachine);
 
 
     /**
@@ -23,14 +23,14 @@ public interface Visitor {
      * @param: visitable
      * @return: java.lang.String
      **/
-    String visitOnExit(StateMachine<?, ?, ?> visitable);
+    String visitOnExit(StateMachine<?, ?, ?> stateMachine);
 
     /**
      *
      * @param: visitable the element to be visited
      * @return: java.lang.String
      **/
-    String visitOnEntry(State<?, ?, ?> visitable);
+    String visitOnEntry(State<?, ?, ?> state);
 
 
     /**
