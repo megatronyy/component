@@ -22,12 +22,12 @@ public interface StateMachine<S, E, C> extends Visitable {
     /**
      * Send an event {@code E} to the state machine.
      *
-     * @param sourceState
+     * @param sourceStateId
      * @param event
-     * @param cx
+     * @param ctx
      * @return
      */
-    S fireEvent(S sourceState, E event, C cx);
+    S fireEvent(S sourceStateId, E event, C ctx);
 
     /**
      * MachineId is the identifier for a State Machine
