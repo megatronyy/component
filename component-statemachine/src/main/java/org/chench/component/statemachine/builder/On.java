@@ -2,7 +2,7 @@ package org.chench.component.statemachine.builder;
 
 import org.chench.component.statemachine.Condition;
 
-public interface On<S, E, C> {
+public interface On<S, E, C> extends When<S, E, C> {
 
     /**
      * 为Transition添加Condition属性
