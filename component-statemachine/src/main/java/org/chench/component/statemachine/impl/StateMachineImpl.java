@@ -53,6 +53,10 @@ public class StateMachineImpl<S, E, C> implements StateMachine<S, E, C> {
         return machineId;
     }
 
+    public void setMachineId(String machineId) {
+        this.machineId = machineId;
+    }
+
     @Override
     public void showStateMachine() {
         SysOutVisitor sysOutVisitor = new SysOutVisitor();
@@ -108,5 +112,13 @@ public class StateMachineImpl<S, E, C> implements StateMachine<S, E, C> {
         if (!ready) {
             throw new StateMachineException("状态机未构建，无法工作");
         }
+    }
+
+    public void setReady(boolean ready) {
+        this.ready = ready;
+    }
+
+    public void setFailCallback(FailCallback<S, E, C> failCallback) {
+        this.failCallback = failCallback;
     }
 }
